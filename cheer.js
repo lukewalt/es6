@@ -6,12 +6,13 @@ const myName = {first, last}
 
 const cheer = ({first, last}) => {
   //loops over arr
+  let upprname = `${first} ${last}`.toUpperCase();
   for (let elem of [...first, ...last]) {
-    console.log(elem.toUpperCase());
     //conditional ternary operator
-    // ?  : ;
+    let tern = 'aeioufhlmnrsx'.includes(elem.toLowerCase()) ? 'an' : 'a'
+    console.log(`Give me ${tern} ${elem.toUpperCase()}!`);
   }
-  console.log("whats that spell?");
+  console.log(`whats that spell?\n${upprname}`);
 }
 
 cheer(myName)
